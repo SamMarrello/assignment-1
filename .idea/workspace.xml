@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99ad4f0c-c2d8-45d7-9575-8ed01dbb1de8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment-1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/words.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/words.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
-    </list>
+    <list default="true" id="99ad4f0c-c2d8-45d7-9575-8ed01dbb1de8" name="Changes" comment="setup for part one of the lab" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,6 +49,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -73,11 +62,23 @@
       <option name="presentableId" value="Default" />
       <updated>1676587184321</updated>
       <workItem from="1676587185387" duration="128000" />
-      <workItem from="1676587427290" duration="3577000" />
+      <workItem from="1676587427290" duration="3676000" />
     </task>
+    <task id="LOCAL-00001" summary="setup for part one of the lab">
+      <created>1676591073324</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676591073324</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="setup for part one of the lab" />
+    <option name="LAST_COMMIT_MESSAGE" value="setup for part one of the lab" />
   </component>
 </project>
