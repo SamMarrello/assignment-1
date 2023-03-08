@@ -2,6 +2,8 @@ package src;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 
 public class App {
@@ -16,6 +18,21 @@ public class App {
 
          //write hashmap to an html file
          createHTMLFile(wordCounter);
+
+         //part 2 starts here
+
+         ArrayList<WordFrequency> frequencies = new ArrayList<>();
+
+         //loops through the hashmap, creates new WordFrequency object with hashmap values
+         for (String key : wordCounter.keySet()) {
+             frequencies.add(new WordFrequency(key, wordCounter.get(key)));
+         }
+
+         //sorts hashmap ascending
+         Collections.sort(frequencies);
+
+         //write arraylist to html file
+         createHTMLFileSorted(frequencies);
     }
 
     //readWords is a file that takes a string that points to a file, and returns an arraylist of strings
@@ -132,5 +149,48 @@ public class App {
         for (String keyWord : wordCounter.keySet()) {
             System.out.println(keyWord + ": " + wordCounter.get(keyWord));
         }
+    }
+
+    //similar to the prevous function:
+    //1: create the file with appropriate
+    private static void createHTMLFileSorted(ArrayList<WordFrequency> frequencies) {
+         File file = new File("res/sortedWords.html");
+
+         try {
+             FileWriter fileWriter = new FileWriter(file);
+             StringBuilder builder = new StringBuilder();
+
+             builder.append("<!DOCTYPE html>");
+             builder.append("<html lang=\"en\">");
+             builder.append("<head>");
+             builder.append("<meta charset=\"UTF-8\">");
+             builder.append("<title>Java Assignment</title>");
+             builder.append("<link rel=\"stylesheet\" href=\"style.css\">");
+             builder.append("</head>");
+             builder.append("<body>");
+
+
+             builder.append("<h1>Word count</h1>");
+
+             builder.append("<table>");
+             for (WordFrequency frequency : frequencies) {
+                 builder.append("<tr>");
+                 builder.append("<td>" + frequency.getWord() + "</td>");
+                 builder.append("<td>" + frequency.getFrequency() + "</td>");
+                 builder.append("</tr>");
+             }
+
+             builder.append("</table>");
+             builder.append("</body>");
+             builder.append("</html>");
+             fileWriter.append(builder.toString());
+             //5
+             fileWriter.close();
+         }
+         catch (Exception e) {
+            throw new RuntimeException();
+         }
+
+
     }
 }
