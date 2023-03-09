@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99ad4f0c-c2d8-45d7-9575-8ed01dbb1de8" name="Changes" comment="added a gitignore">
-      <change afterPath="$PROJECT_DIR$/res/paragraph.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ParagraphFrequency.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WordFrequency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="99ad4f0c-c2d8-45d7-9575-8ed01dbb1de8" name="Changes" comment="completed up to step 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/words.html" beforeDir="false" afterPath="$PROJECT_DIR$/res/words.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/words.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/paragraph.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/paragraph.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/sortedWords.html" beforeDir="false" afterPath="$PROJECT_DIR$/res/sortedWords.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ParagraphFrequency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ParagraphFrequency.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,22 +56,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;graalvm-ce-19&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "graalvm-ce-19",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -88,7 +86,8 @@
       <workItem from="1677618463165" duration="743000" />
       <workItem from="1677619696765" duration="1342000" />
       <workItem from="1678206420507" duration="1621000" />
-      <workItem from="1678303289977" duration="731000" />
+      <workItem from="1678303289977" duration="2418000" />
+      <workItem from="1678370593518" duration="642000" />
     </task>
     <task id="LOCAL-00001" summary="setup for part one of the lab">
       <created>1676591073324</created>
@@ -104,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676591120855</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="completed up to step 2">
+      <created>1678304214521</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678304214521</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +119,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="setup for part one of the lab" />
     <MESSAGE value="added a gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a gitignore" />
+    <MESSAGE value="completed up to step 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed up to step 2" />
   </component>
 </project>

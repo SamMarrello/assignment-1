@@ -33,6 +33,25 @@ public class App {
 
          //write arraylist to html file
          createHTMLFileSorted(frequencies);
+
+         //part 3 starts here
+
+         //read paragraph into an arraylist of seperate words
+         ArrayList<String> paragraph = readWords("res/paragraph.txt");
+         //build a hashmap out of said arraylist
+         HashMap<String, Integer> paragraphMap = buildHashmap(paragraph);
+
+         ArrayList<ParagraphFrequency> paragraphFrequencies = new ArrayList<>();
+        //loop through hashmap, making a key-value pair into a ParagraphFrequency object
+        for (String key : paragraphMap.keySet()) {
+            paragraphFrequencies.add(new ParagraphFrequency(key, paragraphMap.get(key)));
+        }
+
+         //sort arraylist of objects
+        Collections.sort(paragraphFrequencies);
+
+        //write output to html file
+        createParagraphHTML(paragraphFrequencies);
     }
 
     //readWords is a file that takes a string that points to a file, and returns an arraylist of strings
@@ -69,7 +88,7 @@ public class App {
          } catch (IOException e) {
              throw new RuntimeException(e);
          }
-        System.out.println(wordList);
+
         return wordList;
     }
 
@@ -146,20 +165,26 @@ public class App {
         }
 
         //6
-        for (String keyWord : wordCounter.keySet()) {
-            System.out.println(keyWord + ": " + wordCounter.get(keyWord));
-        }
+
     }
 
     //similar to the prevous function:
-    //1: create the file with appropriate
+    //1: create the file with appropriate destination path
+    //2: open up a filewriter and stringbuilder, check to make sure no errors occur
+    //3: write the needed html boilerplate to the file
+    //4: loop through the arraylist, writing the word and its frequency to the file in table format
+    //5: write to file, close filewriter
+    //6: throw exception, showing stack trace if something went wrong
     private static void createHTMLFileSorted(ArrayList<WordFrequency> frequencies) {
+         //1
          File file = new File("res/sortedWords.html");
 
+         //2
          try {
              FileWriter fileWriter = new FileWriter(file);
              StringBuilder builder = new StringBuilder();
 
+             //3
              builder.append("<!DOCTYPE html>");
              builder.append("<html lang=\"en\">");
              builder.append("<head>");
@@ -170,9 +195,9 @@ public class App {
              builder.append("<body>");
 
 
-             builder.append("<h1>Word count</h1>");
-
+             builder.append("<h1>Word count sorted</h1>");
              builder.append("<table>");
+             //4
              for (WordFrequency frequency : frequencies) {
                  builder.append("<tr>");
                  builder.append("<td>" + frequency.getWord() + "</td>");
@@ -183,13 +208,65 @@ public class App {
              builder.append("</table>");
              builder.append("</body>");
              builder.append("</html>");
-             fileWriter.append(builder.toString());
              //5
+             fileWriter.append(builder.toString());
              fileWriter.close();
          }
+         //6
          catch (Exception e) {
             throw new RuntimeException();
          }
+
+
+    }
+    //similar to the prevous function:
+    //1: create the file with appropriate destination path
+    //2: open up a filewriter and stringbuilder, check to make sure no errors occur
+    //3: write the needed html boilerplate to the file
+    //4: loop through the arraylist, writing the word and its frequency to the file in table format
+    //5: write to file, close filewriter
+    //6: throw exception, showing stack trace if something went wrong
+    public static void createParagraphHTML(ArrayList<ParagraphFrequency> frequencies) {
+        //1
+        File file = new File("res/sortedParagraphWords.html");
+
+        //2
+        try {
+            FileWriter fileWriter = new FileWriter(file);
+            StringBuilder builder = new StringBuilder();
+
+            //3
+            builder.append("<!DOCTYPE html>");
+            builder.append("<html lang=\"en\">");
+            builder.append("<head>");
+            builder.append("<meta charset=\"UTF-8\">");
+            builder.append("<title>Java Assignment</title>");
+            builder.append("<link rel=\"stylesheet\" href=\"style.css\">");
+            builder.append("</head>");
+            builder.append("<body>");
+
+
+            builder.append("<h1>Paragraph sorted</h1>");
+            builder.append("<table>");
+            //4
+            for (ParagraphFrequency frequency : frequencies) {
+                builder.append("<tr>");
+                builder.append("<td>" + frequency.getWord() + "</td>");
+                builder.append("<td>" + frequency.getFrequency() + "</td>");
+                builder.append("</tr>");
+            }
+
+            builder.append("</table>");
+            builder.append("</body>");
+            builder.append("</html>");
+            //5
+            fileWriter.append(builder.toString());
+            fileWriter.close();
+        }
+        //6
+        catch (Exception e) {
+            throw new RuntimeException();
+        }
 
 
     }
